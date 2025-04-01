@@ -3,9 +3,9 @@ import Worldview from "./components/Worldview";
 import "./index.css";
 function App() {
     return (
-        <div className="font-code bg-darkgrey text-lightgreen w-screen flex justify-between min-h-screen">
+        <div className="font-code bg-darkgrey text-lightgreen w-screen flex flex-col items-center min-h-screen">
             <TextInterface/>
-            <Worldview></Worldview>
+            <Worldview animationName="world"></Worldview>
         </div>
     );
 }
