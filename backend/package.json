@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules --no-notify ./server.ts"
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules --no-notify ./server.ts",
+    "build": "npm run clear:prod && tsc",
+    "clear:prod": "rimraf dist",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongodb": "^6.15.0",
@@ -18,8 +22,10 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.27.0",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
     "nodemon": "^3.1.9",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",

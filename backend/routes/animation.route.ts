@@ -1,7 +1,7 @@
 import express from "express";
 
 import { getAnimation, postAnimation, updateAnimation, deleteAnimation } from "../controlers/Animation";
-import { authMiddleware } from "middleware";
+import { authMiddleware } from "../middleware";
 
 const router = express.Router();
 
