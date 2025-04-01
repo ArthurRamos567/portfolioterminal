@@ -23,9 +23,10 @@ export default function TextInterface() {
         event.preventDefault();
         if (term.toLowerCase() == "gatinho") {
             setLineArray([...lineArray, { content: term, line: true }, { content: "gatinho", line: false }]);
+            setTerm("");
             return;
         }
-        fetch(`http://localhost:3000/messages/${term.toLowerCase()}`)
+        fetch(`https://portfolioterminal-3.onrender.com/messages/${term.toLowerCase()}`)
             .then((res: Response) => res.json())
             .then((json: MessageResponse) => {
                 const text: string[] = json.data.text;
