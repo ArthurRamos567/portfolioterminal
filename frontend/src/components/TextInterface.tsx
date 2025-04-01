@@ -16,7 +16,7 @@ export default function TextInterface() {
     }
     const [lineArray, setLineArray] = useState([
         { content: "Seja bem vindo", line: true },
-        { content: "Como posso ajudar?", line: true },
+        { content: "Escreva ajuda para ler os comandos disponíveis", line: true },
     ]);
     const [term, setTerm] = useState("");
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
